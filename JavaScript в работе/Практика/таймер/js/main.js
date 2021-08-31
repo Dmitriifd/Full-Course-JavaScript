@@ -47,6 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function getTimeRemaining(endtime) {
         const t = Date.parse(endtime) - Date.parse(new Date());
+        // 1000 - миллисекунды, 1000 * 60 - количество миллисекунд в 1 минуте, 1000 * 60 * 60 - сколько в 1 часе, и * на 24 часа
         const days = Math.floor(t / (1000 * 60 * 60 * 24));
         const hours = Math.floor((t / (1000 * 60 * 60) % 24));
         const minutes = Math.floor((t / 1000 / 60) % 60);
